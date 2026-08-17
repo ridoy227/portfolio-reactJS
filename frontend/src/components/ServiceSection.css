@@ -1,0 +1,343 @@
+.service-container {
+  width: 100%;
+  margin: 0;
+  margin-top: -120px;
+  padding: 0;
+  margin-bottom: 120px;
+}
+
+.service-wrapper {
+  position: relative;
+  width: 100%;
+  border-radius: 0;
+  padding: 116px 71px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 96px;
+  overflow: hidden;
+}
+
+.service-bg-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.service-bg-color {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #171717;
+}
+
+.service-bg-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.2;
+}
+
+.service-decorations {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  width: 100%;
+  height: 828px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.service-abstract-1 {
+  position: absolute;
+  top: 146px;
+  left: 954px;
+  width: 873px;
+  height: 873px;
+  object-fit: cover;
+}
+
+.service-abstract-2-wrapper {
+  position: absolute;
+  top: 21px;
+  left: 527px;
+  width: 180px;
+  height: 180px;
+  transform: rotate(-146deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.service-abstract-2 {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.service-abstract-3-wrapper {
+  position: absolute;
+  top: 0;
+  left: -184px;
+  width: 432px;
+  height: 441px;
+  transform: rotate(151deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.service-abstract-3 {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Floating Animations */
+@keyframes float-1 {
+  0%, 100% { transform: translate(0, 0); }
+  25% { transform: translate(15px, 20px); }
+  50% { transform: translate(0px, 40px); }
+  75% { transform: translate(-15px, 20px); }
+}
+
+@keyframes float-2 {
+  0%, 100% { transform: rotate(-146deg) translate(0, 0); }
+  25% { transform: rotate(-146deg) translate(10px, 15px); }
+  50% { transform: rotate(-146deg) translate(0px, 30px); }
+  75% { transform: rotate(-146deg) translate(-10px, 15px); }
+}
+
+@keyframes float-3 {
+  0%, 100% { transform: rotate(151deg) translate(0, 0); }
+  25% { transform: rotate(151deg) translate(-15px, -10px); }
+  50% { transform: rotate(151deg) translate(0px, -20px); }
+  75% { transform: rotate(151deg) translate(15px, -10px); }
+}
+
+.floating-1 {
+  animation: float-1 12s ease-in-out infinite;
+}
+
+.floating-2 {
+  animation: float-2 9s ease-in-out infinite;
+}
+
+.floating-3 {
+  animation: float-3 10s ease-in-out infinite;
+}
+
+.service-header {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+  max-width: 1299px;
+}
+
+.service-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 48px;
+  font-weight: 500;
+  color: white;
+  line-height: 1;
+}
+
+.service-title .highlight {
+  color: #fd853a;
+}
+
+.service-subtitle {
+  font-family: 'Outfit', sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  color: white;
+  max-width: 576px;
+  line-height: 1.5;
+}
+
+.service-cards-container {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 39px;
+  width: 100%;
+}
+
+.service-cards-viewport {
+  width: 100%;
+  max-width: 1299px;
+  overflow: hidden;
+}
+
+.service-cards-track {
+  display: flex;
+  gap: 20px;
+  width: max-content;
+  transition: transform 0.5s ease-in-out;
+}
+
+.service-card {
+  position: relative;
+  width: 416px;
+  height: 508px;
+  flex-shrink: 0;
+}
+
+.service-card-mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  clip-path: path('M0 37C0 16.5655 16.5655 0 37 0H379C399.435 0 416 16.5655 416 37V338.5C416 358.935 399.435 375.5 379 375.5H356.049C317.534 375.5 286.476 407.031 287.057 445.541L287.433 470.442C287.745 491.092 271.09 508 250.437 508H37C16.5655 508 0 491.435 0 471V37Z');
+}
+
+.service-glass-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.service-card-stack {
+  position: absolute;
+  top: 158px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 2;
+}
+
+.service-stack-layer-1 {
+  position: relative;
+  z-index: 1;
+  width: 328px;
+  height: 329px;
+  background-color: #757575;
+  opacity: 0.5;
+  border-radius: 35px;
+  margin-bottom: -307px;
+}
+
+.service-stack-layer-2 {
+  position: relative;
+  z-index: 2;
+  width: 374px;
+  height: 329px;
+  background-color: #9e9d9d;
+  border-radius: 35px;
+  margin-bottom: -307px;
+}
+
+.service-stack-layer-3 {
+  position: relative;
+  z-index: 3;
+  width: 416px;
+  height: 307px;
+  background-color: white;
+  border-radius: 35px;
+  overflow: hidden;
+}
+
+.service-stack-layer-3 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.service-card-content {
+  position: absolute;
+  top: 44px;
+  left: 0;
+  width: 100%;
+  padding: 0 37px;
+  display: flex;
+  flex-direction: column;
+  gap: 23px;
+  z-index: 3;
+}
+
+.service-card-title {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 500;
+  font-size: 32px;
+  color: white;
+}
+
+.service-card-line {
+  width: 100%;
+}
+
+.service-card-btn {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 114px;
+  height: 114px;
+  background-color: #1d2939;
+  border-radius: 57px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.service-card-btn:hover {
+  transform: scale(1.05);
+}
+
+.service-btn-icon {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrow-layer-1,
+.arrow-layer-2 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+/* Pagination Dots */
+.service-pagination {
+  display: flex;
+  gap: 11px;
+  align-items: center;
+}
+
+.service-pagination .dot {
+  background-color: #e4e7ec;
+  border-radius: 20px;
+  width: 15px;
+  height: 15px;
+}
+
+.service-pagination .dot.active {
+  background-color: #fd853a;
+  width: 60px;
+}

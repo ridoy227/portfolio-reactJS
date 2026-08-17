@@ -1,0 +1,133 @@
+.experience-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 40px 71px;
+}
+
+.experience-title {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 500;
+  font-size: 64px;
+  color: #344054;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.experience-title .highlight {
+  color: #fd853a;
+}
+
+.experience-content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1298px;
+}
+
+/* Left Column: Companies */
+.experience-companies {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  width: 350px;
+}
+
+.company-item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.company-name {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  font-size: 40px;
+  color: #344054;
+  line-height: 1.1;
+}
+
+.company-date {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  color: #98a2b3;
+}
+
+/* Middle Column: Timeline */
+.experience-timeline {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  height: 320px;
+  width: 48px;
+}
+
+.timeline-line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  background-color: #e4e7ec; /* Fallback line if image not used */
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.timeline-line-img {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 100%;
+  z-index: 1;
+}
+
+.timeline-dots {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+}
+
+.timeline-dot {
+  width: 48px;
+  height: 48px;
+}
+
+/* Right Column: Roles */
+.experience-roles {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  width: 444px;
+}
+
+.role-item {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.role-title {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  font-size: 40px;
+  color: #344054;
+  line-height: 1;
+}
+
+.role-desc {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  color: #98a2b3;
+  line-height: 1.5;
+}

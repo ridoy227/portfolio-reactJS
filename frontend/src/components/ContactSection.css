@@ -1,0 +1,116 @@
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 98px 0;
+  width: 100%;
+}
+
+.contact-title {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  font-size: 64px;
+  color: #344054;
+  text-align: center;
+  max-width: 799px;
+  line-height: 1.1;
+  margin-bottom: 40px;
+}
+
+.contact-title .highlight {
+  color: #fd853a;
+}
+
+.contact-form-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.contact-form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  backdrop-filter: blur(7.5px);
+  -webkit-backdrop-filter: blur(7.5px);
+  border: 1px solid #e4e7ec;
+  border-radius: 50px;
+  padding: 14px;
+  width: 832px;
+  max-width: 100%;
+  height: 86px;
+  background-color: white;
+}
+
+.contact-input-group {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+}
+
+.contact-icon-wrapper {
+  background-color: #ffead5;
+  width: 64px;
+  height: 58px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-input {
+  border: none;
+  outline: none;
+  font-family: 'Urbanist', sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  color: black;
+  width: 300px;
+  background: transparent;
+}
+
+.contact-input::placeholder {
+  color: #98a2b3;
+}
+
+.contact-btn {
+  background-color: #fd853a;
+  color: white;
+  font-family: 'Urbanist', sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  padding: 15px 40px;
+  border-radius: 60px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  height: 100%;
+}
+
+.contact-btn:hover {
+  background-color: #e57530;
+}
+
+.contact-badges {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 770px;
+  margin-top: 20px;
+}
+
+.contact-badge {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.contact-badge-text {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: black;
+}
