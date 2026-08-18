@@ -97,3 +97,84 @@
     font-size: 12px;
   }
 }
+
+.header-btn-primary {
+  background-color: #fd853a;
+  color: white;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  padding: 10px 24px;
+  border-radius: 60px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-left: 10px;
+}
+
+.header-btn-primary:hover {
+  background-color: #e57530;
+}
+
+@media (max-width: 768px) {
+  .header-btn-primary {
+    padding: 8px 16px;
+    font-size: 14px;
+    margin-left: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-btn-primary {
+    padding: 6px 12px;
+    font-size: 12px;
+    margin-left: 2px;
+  }
+}
+
+.google-calendar-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  backdrop-filter: blur(4px);
+}
+
+.google-calendar-modal-content {
+  position: relative;
+  width: 90%;
+  max-width: 1000px;
+  height: 80vh;
+  background-color: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.google-calendar-close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: #171717;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.google-calendar-close-btn:hover {
+  background: #fd853a;
+}
