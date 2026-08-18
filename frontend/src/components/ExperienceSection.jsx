@@ -9,26 +9,26 @@ export const ExperienceSection = () => {
   const experiences = [
     {
       id: 1,
-      company: "Cognizant, Mumbai",
-      date: "Sep 2016- July 2020",
-      role: "Experince Designer",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lacus nunc, posuere in justo vulputate, bibendum sodales",
+      company: "Asia Solution XYZ",
+      date: "Oct 2022- oct 2023",
+      role: "Junior Flutter Developer",
+      desc: "Worked closely with UI/UX designers and backend developers to deliver production-ready apps",
       dotImg: imgFrame70
     },
     {
       id: 2,
-      company: "Sugee Pvt limited, Mumbai",
-      date: "Sep 2020- July 2023",
-      role: "UI/UX Designer",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lacus nunc, posuere in justo vulputate, bibendum sodales",
+      company: "IRD Foundation, Dhaka",
+      date: "Nov 2023- April 2024",
+      role: "Flutter Developer",
+      desc: "Resolved critical production bugs, enhancing app stability and user experience",
       dotImg: imgFrame71
     },
     {
       id: 3,
-      company: "Cinetstox, Mumbai",
-      date: "Sep 2023",
-      role: "Lead UX Designer",
-      desc: "",
+      company: "Softvence Agency",
+      date: "July 2024 - Present",
+      role: "Sr Flutter Developer",
+      desc: "Led a team of Flutter developers and managed the full mobile app lifecycle from architecture to deployment for international clients ",
       dotImg: imgFrame70
     }
   ];
