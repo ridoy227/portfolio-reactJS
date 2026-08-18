@@ -12,6 +12,7 @@ const portfolioList = [
   { id: 1, name: 'Investors Group LLC', image: imgFrame26 },
   { id: 1, name: 'Lirante', image: imgFrame26 },
   { id: 1, name: 'Lirante', image: imgFrame26 },
+  { id: 1, name: 'Lirante', image: imgFrame26 },
 ];
 
 

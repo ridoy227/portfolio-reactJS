@@ -80,6 +80,11 @@
   scroll-snap-align: start;
 }
 
+.portfolio-spacer {
+  flex-shrink: 0;
+  width: calc(100% - 633px - 24px);
+}
+
 .portfolio-card-bg {
   position: absolute;
   top: 0;
@@ -278,6 +283,10 @@
     height: 300px;
   }
 
+  .portfolio-spacer {
+    width: calc(100% - 500px - 24px);
+  }
+
   .portfolio-card-title {
     font-size: 48px;
     margin-left: 15px;
@@ -325,6 +334,10 @@
     height: 200px;
   }
 
+  .portfolio-spacer {
+    width: calc(100% - 290px - 24px);
+  }
+
   .portfolio-card-title {
     font-size: 32px;
     margin-left: 10px;
@@ -353,6 +366,10 @@
   .portfolio-card {
     width: 260px;
     height: 180px;
+  }
+
+  .portfolio-spacer {
+    width: calc(100% - 260px - 24px);
   }
 
   .portfolio-card-title {
