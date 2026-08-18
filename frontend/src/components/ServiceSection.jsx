@@ -27,7 +27,7 @@ export const ServiceSection = () => {
 
   // For a 3-item layout, we can slide up to (total - 3) times.
   // With 6 items, that gives us exactly 4 distinct pages/dots (0, 1, 2, 3)
-  const maxIndex = services.length - 3; 
+  const maxIndex = services.length - 3;
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -63,14 +63,14 @@ export const ServiceSection = () => {
             My <span className="highlight">Services</span>
           </h2>
           <p className="service-subtitle">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lacus nunc, posuere in justo vulputate, bibendum sodales 
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lacus nunc, posuere in justo vulputate, bibendum sodales
           </p>
         </div>
 
         {/* Service Cards */}
         <div className="service-cards-container">
           <div className="service-cards-viewport">
-            <div 
+            <div
               className="service-cards-track"
               style={{ transform: `translateX(-${currentIndex * (416 + 20)}px)` }}
             >
@@ -78,10 +78,10 @@ export const ServiceSection = () => {
                 <div key={index} className="service-card">
                   {/* The mask applies the cut-out corner shape */}
                   <div className="service-card-mask">
-                    
+
                     {/* The SVG containing the glass gradient and border */}
                     <img className="service-glass-bg" src={imgServiceBorder} alt="" />
-                    
+
                     {/* The stacked mockups */}
                     <div className="service-card-stack">
                       <div className="service-stack-layer-1"></div>
@@ -113,8 +113,8 @@ export const ServiceSection = () => {
           {/* Pagination Dots */}
           <div className="service-pagination">
             {Array.from({ length: maxIndex + 1 }).map((_, idx) => (
-              <div 
-                key={idx} 
+              <div
+                key={idx}
                 className={`dot ${currentIndex === idx ? 'active' : ''}`}
                 onClick={() => setCurrentIndex(idx)}
                 style={{ cursor: 'pointer' }}
