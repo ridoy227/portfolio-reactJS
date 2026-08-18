@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
-  max-width: 1440px;
+  max-width: 100%;
   margin: 0 auto;
   padding: 40px 71px;
 }
@@ -127,21 +127,21 @@
   .experience-container {
     padding: 40px;
   }
-  
+
   .company-name,
   .role-title {
     font-size: 32px;
   }
-  
+
   .company-date,
   .role-desc {
     font-size: 18px;
   }
-  
+
   .experience-company-col {
     width: 280px;
   }
-  
+
   .experience-role-col {
     width: 380px;
   }

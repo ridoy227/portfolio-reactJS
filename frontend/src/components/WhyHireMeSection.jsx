@@ -12,23 +12,25 @@ export const WhyHireMeSection = () => {
             <img className="why-hire-me-mask" src={imgMaskGroup} alt="Why Hire Me" />
             {/* The decorative ellipses are omitted for simplicity, but could be added via absolute positioned svgs */}
           </div>
-          
+
           <div className="why-hire-me-details">
             <h2 className="why-title">
               Why <span className="highlight">Hire me</span>?
             </h2>
             <p className="why-desc">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lacus nunc, posuere in justo vulputate, bibendum sodales 
-            </p>
-            
+              Mobile App Developer with 7+ years of experience building high-performance mobile apps for international clients. Specialized in
+              scalable architecture (Clean Architecture) and in complex features such as real-time chat, payment systems, and offline-first
+              apps. Proven track record of publishing production apps on both App Store and Play Store. While leading small development
+              teams.</p>
+
             <div className="why-stats">
               <div className="stat-item">
-                <span className="stat-number">450+</span>
+                <span className="stat-number">50+</span>
                 <span className="stat-label">Project Completed</span>
               </div>
               <div className="stat-item">
-                <span className="stat-number">450+</span>
-                <span className="stat-label">Project Completed</span>
+                <span className="stat-number">1M+</span>
+                <span className="stat-label">Dowloads on Stores</span>
               </div>
             </div>
 

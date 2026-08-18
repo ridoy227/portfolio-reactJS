@@ -62,9 +62,9 @@ export const ServiceSection = () => {
           <h2 className="service-title">
             My <span className="highlight">Services</span>
           </h2>
-          <p className="service-subtitle">
+          {/* <p className="service-subtitle">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lacus nunc, posuere in justo vulputate, bibendum sodales
-          </p>
+          </p> */}
         </div>
 
         {/* Service Cards */}
@@ -94,7 +94,6 @@ export const ServiceSection = () => {
                     {/* Text Content inside the mask */}
                     <div className="service-card-content">
                       <h3 className="service-card-title">{service.title}</h3>
-                      <img className="service-card-line" src={imgServiceLine} alt="" />
                     </div>
                   </div>
 
