@@ -18,13 +18,13 @@ const Logo = () => (
 export const Header = () => {
   return (
     <header className="header-container">
-      <button className="nav-link active">Home</button>
-      <a href="#about" className="nav-link">About</a>
+      <button className="nav-link active" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>Home</button>
       <a href="#service" className="nav-link">Service</a>
-      {/* <Logo /> */}
       <a href="#resume" className="nav-link">Resume</a>
-      <a href="#project" className="nav-link">Project</a>
+      <a href="#about" className="nav-link">About</a>
+      <a href="#project" className="nav-link">Portfolio</a>
       <a href="#contact" className="nav-link">Contact</a>
+      <a href="#blog" className="nav-link">Blog</a>
     </header>
   );
 };
