@@ -118,8 +118,8 @@
 }
 
 .hero-btn-primary {
-  background-color: #fd853a;
-  border: 0.5px solid #d0d5dd;
+  background-color: transparent;
+  border: 0.5px solid transparent;
   border-radius: 60px;
   padding: 10px 20px;
   display: flex;
@@ -130,6 +130,12 @@
   font-weight: 500;
   font-size: 25.7px;
   cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.hero-btn-primary:hover {
+  background-color: #fd853a;
+  border-color: #d0d5dd;
 }
 
 .hero-btn-icon {
@@ -142,13 +148,20 @@
 
 .hero-btn-secondary {
   background: transparent;
-  border: none;
+  border: 0.5px solid transparent;
+  border-radius: 60px;
   color: white;
   font-family: 'Outfit', sans-serif;
   font-weight: 300;
   font-size: 25.7px;
   padding: 10px 20px;
   cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.hero-btn-secondary:hover {
+  background-color: #fd853a;
+  border-color: #d0d5dd;
 }
 
 /* Quote Side */

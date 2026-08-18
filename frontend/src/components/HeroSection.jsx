@@ -34,13 +34,21 @@ export const HeroSection = () => {
         <img className="hero-portrait-img" src={imgYoungWoman} alt="Jenny - Product Designer" fetchpriority="high" />
 
         <div className="hero-actions">
-          <button className="hero-btn-primary">
+          <button 
+            className="hero-btn-primary"
+            onClick={() => document.getElementById('project')?.scrollIntoView({ behavior: 'smooth' })}
+          >
             Portfolio
             {/* <div className="hero-btn-icon">
               <img src={imgVector} alt="Arrow" style={{ width: '20px', height: '20px' }} />
             </div> */}
           </button>
-          <button className="hero-btn-secondary">Hire me</button>
+          <button 
+            className="hero-btn-secondary"
+            onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+          >
+            Hire me
+          </button>
         </div>
       </div>
 
