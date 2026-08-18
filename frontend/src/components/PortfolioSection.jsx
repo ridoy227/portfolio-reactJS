@@ -83,9 +83,9 @@ export const PortfolioSection = () => {
               <img className="portfolio-card-bg" src={item.image} alt="Project" />
               <div className="portfolio-card-gradient"></div>
               <div className="portfolio-card-content">
-                <div className="portfolio-card-icon">
+                {/* <div className="portfolio-card-icon">
                   <img src={imgUnion} alt="Arrow" style={{ width: '24px', height: '24px' }} />
-                </div>
+                </div> */}
                 <h3 className="portfolio-card-title">{item.name}</h3>
               </div>
             </div>
