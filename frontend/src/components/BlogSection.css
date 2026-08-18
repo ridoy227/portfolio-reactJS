@@ -110,3 +110,60 @@
   color: #344054;
   line-height: 1.2;
 }
+
+@media (max-width: 1024px) {
+  .blog-container {
+    padding: 60px 40px;
+  }
+
+  .blog-cards {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+  }
+
+  .blog-card {
+    width: 100%;
+    max-width: 380px;
+  }
+}
+
+@media (max-width: 768px) {
+  .blog-container {
+    padding: 40px 20px;
+  }
+
+  .blog-header {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    align-items: center;
+  }
+
+  .blog-title {
+    font-size: 36px;
+  }
+
+  .blog-card {
+    max-width: 100%;
+  }
+
+  .blog-card-image-wrapper {
+    height: 320px;
+  }
+
+  .blog-card-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
+  }
+
+  .blog-card-icon img {
+    width: 20px !important;
+    height: 20px !important;
+  }
+
+  .blog-card-title {
+    font-size: 26px;
+  }
+}

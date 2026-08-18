@@ -115,3 +115,92 @@
   background-color: #151515;
   color: #ffffff;
 }
+
+@media (max-width: 1024px) {
+  .why-hire-me-wrapper {
+    padding: 0 40px;
+    margin-bottom: 60px;
+  }
+
+  .why-hire-me-container {
+    padding: 60px 40px;
+  }
+
+  .why-hire-me-content {
+    flex-direction: column;
+    height: auto;
+    gap: 40px;
+    align-items: center;
+  }
+
+  .why-hire-me-images {
+    width: 100%;
+    max-width: 480px;
+    height: auto;
+    aspect-ratio: 1 / 1;
+  }
+
+  .why-hire-me-details {
+    padding-left: 0;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .why-title {
+    font-size: 48px;
+    line-height: 1.2;
+  }
+
+  .why-desc {
+    max-width: 100%;
+    font-size: 18px;
+  }
+
+  .why-stats {
+    justify-content: center;
+    gap: 60px;
+  }
+
+  .why-hire-btn {
+    font-size: 24px;
+    padding: 20px 40px;
+    border-radius: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .why-hire-me-wrapper {
+    padding: 0 20px;
+    margin-bottom: 40px;
+  }
+
+  .why-hire-me-container {
+    padding: 40px 20px;
+    border-radius: 30px;
+  }
+
+  .why-title {
+    font-size: 36px;
+  }
+
+  .why-stats {
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+
+  .stat-number {
+    font-size: 28px;
+  }
+
+  .stat-label {
+    font-size: 16px;
+  }
+
+  .why-hire-btn {
+    font-size: 20px;
+    padding: 15px 30px;
+    width: 100%;
+    max-width: 280px;
+  }
+}

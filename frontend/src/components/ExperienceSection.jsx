@@ -39,34 +39,25 @@ export const ExperienceSection = () => {
         My <span className="highlight">Work Experince</span>
       </h2>
 
-      <div className="experience-content">
-        <div className="experience-companies">
-          {experiences.map(exp => (
-            <div key={exp.id} className="company-item">
+      <div className="experience-list">
+        {experiences.map(exp => (
+          <div key={exp.id} className="experience-row">
+            <div className="experience-company-col">
               <h3 className="company-name">{exp.company}</h3>
               <p className="company-date">{exp.date}</p>
             </div>
-          ))}
-        </div>
 
-        <div className="experience-timeline">
-          {/* <img className="timeline-line-img" src={imgLine4} alt="" /> */}
-          <div className="timeline-line"></div>
-          <div className="timeline-dots">
-            {experiences.map(exp => (
-              <img key={exp.id} className="timeline-dot" src={exp.dotImg} alt="" />
-            ))}
-          </div>
-        </div>
+            <div className="experience-timeline-col">
+              <div className="timeline-line"></div>
+              <img className="timeline-dot" src={exp.dotImg} alt="" />
+            </div>
 
-        <div className="experience-roles">
-          {experiences.map(exp => (
-            <div key={exp.id} className="role-item">
+            <div className="experience-role-col">
               <h3 className="role-title">{exp.role}</h3>
               {exp.desc && <p className="role-desc">{exp.desc}</p>}
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
     </section>
   );
