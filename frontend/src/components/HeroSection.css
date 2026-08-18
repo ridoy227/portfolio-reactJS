@@ -154,7 +154,7 @@
 /* Quote Side */
 .hero-quote {
   position: absolute;
-  left: 0px;
+  left: 20px;
   top: 50%;
   display: flex;
   flex-direction: column;
@@ -180,7 +180,7 @@
 /* Experience Side */
 .hero-experience {
   position: absolute;
-  right: 71px;
+  right: 20px;
   top: 450px;
   display: flex;
   flex-direction: column;
