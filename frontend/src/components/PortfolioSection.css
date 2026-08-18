@@ -63,6 +63,7 @@
   max-width: 1290px;
   overflow-x: auto;
   scrollbar-width: none;
+  scroll-snap-type: x mandatory;
 }
 
 .portfolio-carousel::-webkit-scrollbar {
@@ -76,6 +77,7 @@
   border-radius: 20px;
   flex-shrink: 0;
   overflow: hidden;
+  scroll-snap-align: start;
 }
 
 .portfolio-card-bg {
@@ -96,6 +98,12 @@
   height: 100%;
   background: linear-gradient(196.75deg, rgba(0, 0, 0, 0) 47.41%, rgba(0, 0, 0, 0.36) 76.39%, rgba(0, 0, 0, 0.5) 89.23%);
   z-index: 2;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.portfolio-card:hover .portfolio-card-gradient {
+  opacity: 1;
 }
 
 .portfolio-card-content {
@@ -132,6 +140,14 @@
   color: #fffaf5;
   margin-bottom: 20px;
   margin-left: 20px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.portfolio-card:hover .portfolio-card-title {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* Pagination Dots */
@@ -146,6 +162,7 @@
   border-radius: 20px;
   width: 15px;
   height: 15px;
+  transition: width 0.3s ease, background-color 0.3s ease;
 }
 
 .dot.active {

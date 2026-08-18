@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import './PortfolioSection.css';
 
 import imgFrame26 from '../assets/investor-groupllc.png';
@@ -12,11 +12,56 @@ const portfolioList = [
   { id: 1, name: 'Investors Group LLC', image: imgFrame26 },
   { id: 1, name: 'Lirante', image: imgFrame26 },
   { id: 1, name: 'Lirante', image: imgFrame26 },
-  { id: 2, name: 'Lirante', image: imgFrame26 },
 ];
 
 
 export const PortfolioSection = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const carouselRef = useRef(null);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      if (carouselRef.current) {
+        const itemWidth = carouselRef.current.children[0].offsetWidth;
+        const gap = 24;
+        const totalItems = portfolioList.length;
+
+        setCurrentIndex((prevIndex) => {
+          const nextIndex = (prevIndex + 1) % totalItems;
+          carouselRef.current.scrollTo({
+            left: nextIndex * (itemWidth + gap),
+            behavior: 'smooth'
+          });
+          return nextIndex;
+        });
+      }
+    }, 3000);
+
+    return () => clearInterval(timer);
+  }, []);
+
+  const handleScroll = () => {
+    if (carouselRef.current) {
+      const scrollLeft = carouselRef.current.scrollLeft;
+      const itemWidth = carouselRef.current.children[0].offsetWidth;
+      const gap = 24;
+      const newIndex = Math.round(scrollLeft / (itemWidth + gap));
+      setCurrentIndex(newIndex);
+    }
+  };
+
+  const handleDotClick = (index) => {
+    if (carouselRef.current) {
+      const itemWidth = carouselRef.current.children[0].offsetWidth;
+      const gap = 24;
+      carouselRef.current.scrollTo({
+        left: index * (itemWidth + gap),
+        behavior: 'smooth'
+      });
+      setCurrentIndex(index);
+    }
+  };
+
   return (
     <section className="portfolio-wrapper" id="project">
       <div className="portfolio-header">
@@ -27,9 +72,13 @@ export const PortfolioSection = () => {
       </div>
 
       <div className="portfolio-content">
-        <div className="portfolio-carousel">
-          {portfolioList.map(item => (
-            <div key={item.id} className="portfolio-card">
+        <div
+          className="portfolio-carousel"
+          ref={carouselRef}
+          onScroll={handleScroll}
+        >
+          {portfolioList.map((item, index) => (
+            <div key={index} className="portfolio-card">
               <img className="portfolio-card-bg" src={item.image} alt="Project" />
               <div className="portfolio-card-gradient"></div>
               <div className="portfolio-card-content">
@@ -43,10 +92,14 @@ export const PortfolioSection = () => {
         </div>
 
         <div className="portfolio-pagination">
-          <div className="dot active"></div>
-          <div className="dot"></div>
-          <div className="dot"></div>
-          <div className="dot"></div>
+          {portfolioList.map((_, index) => (
+            <div
+              key={index}
+              className={`dot ${currentIndex === index ? 'active' : ''}`}
+              onClick={() => handleDotClick(index)}
+              style={{ cursor: 'pointer' }}
+            ></div>
+          ))}
         </div>
 
         <div className="portfolio-marquee-wrapper">
