@@ -273,6 +273,7 @@
     flex-direction: column;
     align-items: center;
     gap: 30px;
+    overflow: hidden;
   }
 
   .hero-content {
@@ -282,6 +283,8 @@
     transform: none;
     width: 100%;
     align-items: center;
+    animation: none;
+    opacity: 1;
   }
 
   .hero-title {
@@ -299,11 +302,14 @@
     max-width: 500px;
     height: 250px;
     margin-top: 60px;
+    animation: none;
+    opacity: 1;
   }
 
   .hero-portrait-img {
     top: -90px;
-    left: -40px;
+    left: 50%;
+    transform: translateX(-50%);
     width: 580px;
     height: auto;
   }
@@ -324,6 +330,8 @@
     text-align: center;
     max-width: 450px;
     margin-top: 20px;
+    animation: none;
+    opacity: 1;
   }
 
   .hero-experience {
@@ -332,29 +340,48 @@
     top: auto;
     align-items: center;
     margin-top: 10px;
+    animation: none;
+    opacity: 1;
   }
 }
 
 @media (max-width: 768px) {
+  .hero-container {
+    padding: 15px 15px 50px 15px;
+    gap: 24px;
+  }
+
   .hero-title {
-    font-size: 48px;
+    font-size: 42px;
+    padding: 0 10px;
+  }
+
+  .hello-badge {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+
+  .hello-icon {
+    width: 22px;
+    height: 22px;
+    right: -20px;
   }
 
   .hero-portrait-wrapper {
-    max-width: 400px;
+    max-width: 340px;
     height: 200px;
-    margin-top: 40px;
+    margin-top: 30px;
+    overflow: hidden;
   }
 
   .hero-portrait-img {
-    top: -70px;
-    left: -30px;
-    width: 460px;
+    top: -60px;
+    width: 420px;
   }
 
   .hero-btn-primary,
   .hero-btn-secondary {
-    font-size: 20px;
+    font-size: 18px;
     padding: 8px 16px;
   }
 
@@ -363,35 +390,82 @@
     border-radius: 30px;
     flex-wrap: wrap;
     justify-content: center;
+    padding: 8px;
+  }
+
+  .hero-quote-text {
+    font-size: 17px;
+  }
+
+  .hero-experience-number {
+    font-size: 40px;
   }
 }
 
 @media (max-width: 480px) {
+  .hero-container {
+    padding: 10px 12px 40px 12px;
+    gap: 20px;
+  }
+
   .hero-title {
-    font-size: 36px;
+    font-size: 32px;
+    padding: 0 5px;
+  }
+
+  .hello-badge {
+    font-size: 14px;
+    padding: 8px 16px;
+    margin-top: 10px;
+  }
+
+  .hello-icon {
+    width: 18px;
+    height: 18px;
+    right: -16px;
   }
 
   .hero-portrait-wrapper {
-    max-width: 320px;
+    max-width: 280px;
     height: 160px;
-    margin-top: 30px;
+    margin-top: 20px;
   }
 
   .hero-portrait-img {
-    top: -55px;
-    left: -25px;
-    width: 370px;
+    top: -45px;
+    width: 350px;
+  }
+
+  .hero-btn-primary,
+  .hero-btn-secondary {
+    font-size: 16px;
+    padding: 7px 14px;
+  }
+
+  .hero-actions {
+    gap: 6px;
+    padding: 6px;
+  }
+
+  .hero-quote {
+    max-width: 100%;
+    padding: 0 10px;
   }
 
   .hero-quote-text {
-    font-size: 16px;
+    font-size: 15px;
   }
 
   .hero-experience-number {
-    font-size: 36px;
+    font-size: 32px;
   }
 
   .hero-experience-text {
-    font-size: 16px;
+    font-size: 15px;
+  }
+
+  .hero-star-icon {
+    width: 24px;
+    height: 24px;
   }
 }

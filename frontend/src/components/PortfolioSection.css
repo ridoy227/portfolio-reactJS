@@ -7,6 +7,7 @@
   align-items: center;
   gap: 48px;
   margin-top: -120px;
+  overflow: hidden;
 }
 
 .portfolio-header {
@@ -54,6 +55,7 @@
   align-items: center;
   gap: 48px;
   width: 100%;
+  min-width: 0;
 }
 
 .portfolio-carousel {
@@ -64,6 +66,7 @@
   overflow-x: auto;
   scrollbar-width: none;
   scroll-snap-type: x mandatory;
+  min-width: 0;
 }
 
 .portfolio-carousel::-webkit-scrollbar {
@@ -175,10 +178,18 @@
   width: 60px;
 }
 
+/* Marquee Container - prevents oversized marquee from expanding flex parent */
+.portfolio-marquee-container {
+  width: 100%;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
 /* Marquee Tape */
 .portfolio-marquee-wrapper {
   position: relative;
   width: 110vw;
+  margin-left: -5vw;
   flex-shrink: 0;
   margin-top: 10px;
   transform: rotate(-2deg);
@@ -271,11 +282,14 @@
   .portfolio-wrapper {
     padding: 60px 40px;
     gap: 36px;
+    margin-top: -80px;
   }
 
   .portfolio-title {
     font-size: 48px;
     max-width: 100%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
   }
 
   .portfolio-card {
@@ -311,6 +325,7 @@
   .portfolio-wrapper {
     padding: 40px 20px;
     gap: 30px;
+    margin-top: -40px;
   }
 
   .portfolio-header {
@@ -321,7 +336,7 @@
   }
 
   .portfolio-title {
-    font-size: 36px;
+    font-size: 32px;
   }
 
   .see-all-btn {
@@ -363,6 +378,14 @@
 }
 
 @media (max-width: 480px) {
+  .portfolio-wrapper {
+    margin-top: -20px;
+  }
+
+  .portfolio-title {
+    font-size: 26px;
+  }
+
   .portfolio-card {
     width: 260px;
     height: 180px;

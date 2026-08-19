@@ -5,6 +5,7 @@
   padding: 0;
   border-radius: 50px;
   overflow: hidden;
+  overflow-x: hidden;
 }
 
 .service-wrapper {

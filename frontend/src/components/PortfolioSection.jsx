@@ -103,15 +103,17 @@ export const PortfolioSection = () => {
           ))}
         </div>
 
-        <div className="portfolio-marquee-wrapper">
-          <div className="portfolio-marquee">
-            {[...Array(2)].map((_, i) => (
-              <div key={i} className="portfolio-marquee-content">
-                {["Landing Page", "✦", "Product Design", "✦", "Animation", "✦", "Glassmorphism", "✦", "Cards", "✦"].map((tag, j) => (
-                  <span key={j} className="portfolio-marquee-tag">{tag}</span>
-                ))}
-              </div>
-            ))}
+        <div className="portfolio-marquee-container">
+          <div className="portfolio-marquee-wrapper">
+            <div className="portfolio-marquee">
+              {[...Array(2)].map((_, i) => (
+                <div key={i} className="portfolio-marquee-content">
+                  {["Landing Page", "✦", "Product Design", "✦", "Animation", "✦", "Glassmorphism", "✦", "Cards", "✦"].map((tag, j) => (
+                    <span key={j} className="portfolio-marquee-tag">{tag}</span>
+                  ))}
+                </div>
+              ))}
+            </div>
           </div>
         </div>
 
