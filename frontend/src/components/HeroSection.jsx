@@ -11,7 +11,7 @@ import imgVector from '../assets/b2effe9bec60307f97eb158dbc2f791ee7dd0eef.svg';
 
 export const HeroSection = () => {
   return (
-    <section className="hero-container">
+    <section className="hero-container" id="home">
       {/* Decorative Vectors could go here */}
       <div className="hero-decorations">
         {/* Placeholder for complex SVG background elements */}

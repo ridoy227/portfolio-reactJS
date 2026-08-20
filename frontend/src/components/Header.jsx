@@ -17,22 +17,57 @@ const Logo = () => (
 
 export const Header = () => {
   const [isCalendlyOpen, setIsCalendlyOpen] = useState(false);
-  const [rootElement, setRootElement] = useState(null);
+  const [activeSection, setActiveSection] = useState('home');
+  const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
-    // We get the root element after mount to avoid issues
-    setRootElement(document.getElementById('root'));
+    let lastScrollY = window.scrollY;
+
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > lastScrollY && currentScrollY > 100) {
+        setIsVisible(false);
+      } else {
+        setIsVisible(true);
+      }
+      lastScrollY = currentScrollY;
+
+      const sections = ['home', 'service', 'resume', 'about', 'project', 'contact', 'blog'];
+      const scrollPosition = currentScrollY + 150; // Offset for the fixed header
+
+      for (const section of sections) {
+        const element = document.getElementById(section);
+        if (element) {
+          const offsetTop = element.offsetTop;
+          const offsetBottom = offsetTop + element.offsetHeight;
+
+          if (scrollPosition >= offsetTop && scrollPosition < offsetBottom) {
+            setActiveSection(section);
+            break;
+          }
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    // Call once initially
+    handleScroll();
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
   }, []);
 
   return (
-    <header className="header-container">
-      <button className="nav-link" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>Home</button>
-      <a href="#service" className="nav-link">Service</a>
-      <a href="#resume" className="nav-link">Resume</a>
-      <a href="#about" className="nav-link">About</a>
-      <a href="#project" className="nav-link">Portfolio</a>
-      <a href="#contact" className="nav-link">Contact</a>
-      <a href="#blog" className="nav-link">Blog</a>
+    <header className={`header-container ${isVisible ? '' : 'hidden'}`}>
+      <a href="#home" className={`nav-link ${activeSection === 'home' ? 'active' : ''}`}>Home</a>
+      <a href="#service" className={`nav-link ${activeSection === 'service' ? 'active' : ''}`}>Service</a>
+      <a href="#resume" className={`nav-link ${activeSection === 'resume' ? 'active' : ''}`}>Resume</a>
+      <a href="#about" className={`nav-link ${activeSection === 'about' ? 'active' : ''}`}>About</a>
+      <a href="#project" className={`nav-link ${activeSection === 'project' ? 'active' : ''}`}>Portfolio</a>
+      <a href="#contact" className={`nav-link ${activeSection === 'contact' ? 'active' : ''}`}>Contact</a>
+      <a href="#blog" className={`nav-link ${activeSection === 'blog' ? 'active' : ''}`}>Blog</a>
 
       <button className="header-btn-primary" onClick={() => setIsCalendlyOpen(true)}>
         Let's Talk

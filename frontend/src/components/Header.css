@@ -14,6 +14,11 @@
   width: max-content;
   gap: 10px;
   margin: 20px auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+.header-container.hidden {
+  transform: translateY(-150%);
 }
 
 .nav-link {
