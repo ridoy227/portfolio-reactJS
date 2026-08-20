@@ -17,12 +17,12 @@ export const ContactSection = () => {
         <div className="contact-form">
           <div className="contact-input-group">
             <div className="contact-icon-wrapper">
-              <img src={imgVuesaxBoldSms} alt="SMS" style={{width: '32px', height: '32px'}} />
+              <img src={imgVuesaxBoldSms} alt="SMS" style={{ width: '32px', height: '32px' }} />
             </div>
-            <input 
-              type="email" 
-              className="contact-input" 
-              placeholder="Enter Email Address" 
+            <input
+              type="email"
+              className="contact-input"
+              placeholder="Enter Email Address"
             />
           </div>
           <button className="contact-btn">Send</button>
@@ -30,15 +30,15 @@ export const ContactSection = () => {
 
         <div className="contact-badges">
           <div className="contact-badge">
-            <img src={imgVuesaxBoldStar} alt="Star" style={{width: '24px', height: '24px'}} />
+            <img src={imgVuesaxBoldStar} alt="Star" style={{ width: '24px', height: '24px' }} />
             <span className="contact-badge-text">4.9/5 Average Ratings</span>
           </div>
           <div className="contact-badge">
-            <img src={imgVuesaxBoldAward} alt="Award" style={{width: '24px', height: '24px'}} />
+            <img src={imgVuesaxBoldAward} alt="Award" style={{ width: '24px', height: '24px' }} />
             <span className="contact-badge-text">25+ Winning Awards</span>
           </div>
           <div className="contact-badge">
-            <img src={imgVuesaxBoldShieldTick} alt="Shield" style={{width: '24px', height: '24px'}} />
+            <img src={imgVuesaxBoldShieldTick} alt="Shield" style={{ width: '24px', height: '24px' }} />
             <span className="contact-badge-text">Certified Product Designer</span>
           </div>
         </div>

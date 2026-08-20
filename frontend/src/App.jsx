@@ -6,6 +6,7 @@ import { ServiceSection } from './components/ServiceSection';
 import { ExperienceSection } from './components/ExperienceSection';
 import { WhyHireMeSection } from './components/WhyHireMeSection';
 import { PortfolioSection } from './components/PortfolioSection';
+import { TestimonialSection } from './components/TestimonialSection';
 import { ContactSection } from './components/ContactSection';
 import { BlogSection } from './components/BlogSection';
 import { Footer } from './components/Footer';
@@ -19,6 +20,7 @@ function App() {
       <ExperienceSection />
       <WhyHireMeSection />
       <PortfolioSection />
+      <TestimonialSection />
       <ContactSection />
       <BlogSection />
       <Footer />

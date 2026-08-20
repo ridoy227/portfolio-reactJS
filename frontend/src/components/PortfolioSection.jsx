@@ -64,7 +64,7 @@ export const PortfolioSection = () => {
   };
 
   return (
-    <section className="portfolio-wrapper" id="project">
+    <section className="portfolio-wrapper mt-10" id="project">
       <div className="portfolio-header">
         <h2 className="portfolio-title">
           Lets have a look at my <span className="highlight">Portfolio</span>
@@ -72,7 +72,7 @@ export const PortfolioSection = () => {
         <button className="see-all-btn">See All</button>
       </div>
 
-      <div className="portfolio-content">
+      <div className="portfolio-content mb-20">
         <div
           className="portfolio-carousel"
           ref={carouselRef}

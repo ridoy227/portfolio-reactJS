@@ -38,7 +38,7 @@ export const BlogSection = () => {
     <section className="blog-container" id="blog">
       <div className="blog-header">
         <h2 className="blog-title">
-          From my<br/>blog post
+          From my<br />blog post
         </h2>
         <button className="see-all-btn">See All</button>
       </div>
@@ -48,13 +48,13 @@ export const BlogSection = () => {
           <div key={blog.id} className="blog-card">
             <div className="blog-card-image-wrapper">
               <img className="blog-card-img" src={blog.img} alt={blog.title} />
-              <div className="blog-card-icon">
+              {/* <div className="blog-card-icon">
                 <img src={imgVector} alt="Go" style={{width: '30px', height: '30px', transform: 'rotate(45deg)'}} />
-              </div>
+              </div> */}
             </div>
-            
+
             <div className="blog-card-tag">{blog.tag}</div>
-            
+
             <div className="blog-card-meta">
               <div className="meta-item">
                 <div className="meta-dot"></div>
