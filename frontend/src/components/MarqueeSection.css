@@ -1,0 +1,75 @@
+.marquee-section-container {
+  width: 110vw;
+  margin-left: -5vw;
+  overflow: hidden;
+  position: relative;
+  margin-top: -100px;
+  /* Pull it slightly up to overlap the PortfolioSection bottom margin/space */
+  margin-bottom: 180px;
+}
+
+.marquee-section-wrapper {
+  position: relative;
+  width: 120vw;
+  left: 50%;
+  margin-top: 100px;
+  margin-bottom: 60px;
+  transform: translateX(-50%) rotate(-2deg);
+  background-color: #fd853a;
+  padding: 20px 0;
+  display: flex;
+  z-index: 10;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.marquee-section-track {
+  display: flex;
+  width: max-content;
+  animation: scrollMarqueeSection 20s linear infinite;
+}
+
+.marquee-section-content {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding-right: 40px;
+}
+
+.marquee-section-tag {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  color: #171717;
+  text-transform: uppercase;
+  white-space: nowrap;
+  letter-spacing: 2px;
+}
+
+@keyframes scrollMarqueeSection {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-25%);
+    /* Since we have 4 repetitions, scrolling 25% loops it seamlessly */
+  }
+}
+
+@media (max-width: 768px) {
+  .marquee-section-container {
+    width: 115vw;
+    margin-left: -7.5vw;
+    margin-top: -60px;
+    margin-bottom: 40px;
+  }
+
+  .marquee-section-wrapper {
+    padding: 16px 0;
+    width: 125vw;
+  }
+
+  .marquee-section-tag {
+    font-size: 18px;
+  }
+}

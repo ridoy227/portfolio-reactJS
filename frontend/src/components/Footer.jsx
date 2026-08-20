@@ -22,18 +22,18 @@ export const Footer = () => {
           <img src={imgIconOutlinedDirectionsStraightArrowsUpRight} alt="Arrow" />
         </button>
       </div>
-      
+
       {/* <img src={imgLine5} className="footer-line" alt="Separator" /> */}
       <div className="footer-line"></div>
 
       <div className="footer-main">
         <div className="footer-col-1">
-          <div className="footer-logo">
-            <img src={imgFrame55} alt="Logo Mark" style={{width: '46px', height: '46px'}} />
-            <img src={imgTypo} alt="Jayesh" style={{height: '19px'}} />
-          </div>
+          {/* <div className="footer-logo">
+            <img src={imgFrame55} alt="Logo Mark" style={{ width: '46px', height: '46px' }} />
+            <img src={imgTypo} alt="Md Ridoy" style={{ height: '19px' }} />
+          </div> */}
           <p className="footer-desc">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed congue interdum ligula a dignissim. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lobortis orci elementum egestas lobortis.
+            I help early-stage founders turn an idea into a working, launch-ready app in Flutter.
           </p>
           <div className="footer-socials">
             <img src={imgVuesaxBoldFacebook} alt="Facebook" />
@@ -58,9 +58,9 @@ export const Footer = () => {
         <div className="footer-col">
           <h3 className="footer-col-title">Contact</h3>
           <div className="footer-links">
-            <a href="#" className="footer-link">+91 7738443636</a>
-            <a href="mailto:Jaycrea36@gmail.com" className="footer-link">Jaycrea36@gmail.com</a>
-            <a href="#" className="footer-link">Portfolio-jcrea.com</a>
+            <a href="#" className="footer-link">+880 1405804033</a>
+            <a href="mailto:ashiquer6364@gmail.com" className="footer-link">ashiquer6364@gmail.com</a>
+            <a href="#" className="footer-link">devridoy.netlify.app</a>
           </div>
         </div>
 
@@ -69,16 +69,16 @@ export const Footer = () => {
           <div className="footer-newsletter">
             <input type="email" className="footer-newsletter-input" placeholder="Email Address" />
             <button className="footer-newsletter-btn">
-              <img src={imgSubtract} alt="Send" style={{width: '24px', height: '24px'}} />
+              <img src={imgSubtract} alt="Send" style={{ width: '24px', height: '24px' }} />
             </button>
           </div>
         </div>
       </div>
 
       <div className="footer-line"></div>
-      
+
       <div className="footer-bottom">
-        <span>Copyright© 2023 Jayesh. All Rights Reserved.</span>
+        <span>Copyright© 2026 Ridoy. All Rights Reserved.</span>
         <span>User Terms & Conditions | Privacy Policy</span>
       </div>
     </footer>

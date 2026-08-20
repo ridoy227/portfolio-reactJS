@@ -1,32 +1,24 @@
 import React, { useState, useRef, useEffect } from 'react';
 import './PortfolioSection.css';
 
-import imgInvestor from '../assets/investor-groupllc.png';
-import imgLirante from '../assets/b0eb65dcdb6082da906fde33327b458268159d80.png';
+import imgFrame26 from '../assets/investor-groupllc.png';
 import imgUnion from '../assets/ccfdb7502b85a08a8680dd69bbf8f40d1aecb56c.svg';
 import imgVector from '../assets/81bdce8e525ef4788fce47b9d51ca1c4127e86c6.svg';
 import imgVector1 from '../assets/3b88acfc6a5ec5ad32cd308a92fa59b742d56c2b.svg';
 
+
 // list of items with iamge path, name
 const portfolioList = [
-  { id: 1, name: 'Lirante', image: imgLirante },
-  { id: 2, name: 'Investors Group LLC', image: imgInvestor },
-  { id: 3, name: 'Lirante', image: imgLirante },
-  { id: 4, name: 'Lirante', image: imgLirante },
+  { id: 1, name: 'Investors Group LLC', image: imgFrame26 },
+  { id: 1, name: 'Lirante', image: imgFrame26 },
+  { id: 1, name: 'Lirante', image: imgFrame26 },
+  { id: 1, name: 'Lirante', image: imgFrame26 },
 ];
+
 
 export const PortfolioSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [activeCategory, setActiveCategory] = useState('Landing Page');
   const carouselRef = useRef(null);
-
-  const categories = [
-    'Landing Page',
-    'Product Design',
-    'Animation',
-    'Glassmorphism',
-    'Cards'
-  ];
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -72,7 +64,7 @@ export const PortfolioSection = () => {
   };
 
   return (
-    <section className="portfolio-wrapper mt-10" id="project">
+    <section className="portfolio-wrapper" id="project">
       <div className="portfolio-header">
         <h2 className="portfolio-title">
           Lets have a look at my <span className="highlight">Portfolio</span>
@@ -80,8 +72,7 @@ export const PortfolioSection = () => {
         <button className="see-all-btn">See All</button>
       </div>
 
-      <div className="portfolio-content mb-20">
-        {/* Carousel */}
+      <div className="portfolio-content">
         <div
           className="portfolio-carousel"
           ref={carouselRef}
@@ -92,16 +83,15 @@ export const PortfolioSection = () => {
               <img className="portfolio-card-bg" src={item.image} alt="Project" />
               <div className="portfolio-card-gradient"></div>
               <div className="portfolio-card-content">
-                <div className="portfolio-card-icon">
+                {/* <div className="portfolio-card-icon">
                   <img src={imgUnion} alt="Arrow" style={{ width: '24px', height: '24px' }} />
-                </div>
+                </div> */}
                 <h3 className="portfolio-card-title">{item.name}</h3>
               </div>
             </div>
           ))}
         </div>
 
-        {/* Carousel Dots */}
         <div className="portfolio-pagination">
           {portfolioList.map((_, index) => (
             <div
@@ -113,36 +103,6 @@ export const PortfolioSection = () => {
           ))}
         </div>
 
-        {/* Categories Bar */}
-        <div className="portfolio-categories">
-          {categories.map((cat, idx) => (
-            <button
-              key={idx}
-              className={`category-pill ${activeCategory === cat ? 'active' : ''}`}
-              onClick={() => setActiveCategory(cat)}
-            >
-              <p>{cat}</p>
-            </button>
-          ))}
-        </div>
-
-        {/* Project Details Block */}
-        <div className="portfolio-details">
-          <div className="portfolio-details-header">
-            <h3 className="portfolio-details-title">
-              Lirante - Food Delivery Solution
-            </h3>
-            <button className="portfolio-details-btn">
-              <div className="portfolio-details-arrow-wrapper">
-                <img src={imgVector1} alt="" className="arrow-line-1" />
-                <img src={imgVector} alt="" className="arrow-line-2" />
-              </div>
-            </button>
-          </div>
-          <p className="portfolio-details-desc">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed congue interdum ligula a dignissim. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lobortis orci elementum egestas lobortis.
-          </p>
-        </div>
       </div>
     </section>
   );
