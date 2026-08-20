@@ -1,7 +1,7 @@
 import React from 'react';
 import './WhyHireMeSection.css';
 
-import imgMaskGroup from '../assets/1b5633d8c33f2ece91ab6f55e11cdcd6c4f9c261.png';
+import imgMaskGroup from '../assets/why_me.png';
 
 export const WhyHireMeSection = () => {
   return (

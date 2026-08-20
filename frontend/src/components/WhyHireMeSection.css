@@ -26,14 +26,16 @@
   width: 100%;
   max-width: 1299px;
   height: 600px;
+
 }
 
 /* Left side images */
 .why-hire-me-images {
   position: relative;
   width: 603px;
-  height: 600px;
+  height: 620px;
   flex-shrink: 0;
+  object-fit: cover;
 }
 
 .why-hire-me-mask {
