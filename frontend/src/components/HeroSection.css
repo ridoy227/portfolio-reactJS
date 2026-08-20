@@ -9,7 +9,7 @@
   position: relative;
   width: 100%;
   max-width: 1440px;
-  height: 846px;
+  height: 896px;
   margin: 0 auto;
   margin-top: 0px;
   /* Below header */
@@ -64,6 +64,7 @@
   color: #171717;
   text-align: center;
   margin-top: 10px;
+  margin-bottom: 100px;
   max-width: max-content;
 }
 
@@ -74,7 +75,7 @@
 /* Portrait Image */
 .hero-portrait-wrapper {
   position: absolute;
-  top: 320px;
+  top: 370px;
   left: 50%;
   transform: translateX(-50%);
   width: 811.8px;
