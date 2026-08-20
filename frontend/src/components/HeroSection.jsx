@@ -6,7 +6,7 @@ import imgVector1 from '../assets/1b029b506cdf9d283a1fad3bf79fc6a93df82af7.svg';
 import imgVuesaxBoldQuoteUp from '../assets/0a9145f1e53199d3e0ff8c0da06aba2e473fa614.svg';
 import imgStar from '../assets/e6ca78e450aec2993a4f0a3b564dca05c8305bc9.svg';
 import imgEllipse2 from '../assets/4fb3a80914193c828437132c8f102e4e79500408.svg';
-import imgYoungWoman from '../assets/Gemini_Generated_Image_5nk74k5nk74k5nk7 1.png';
+import imgYoungWoman from '../assets/hero_me.png';
 import imgVector from '../assets/b2effe9bec60307f97eb158dbc2f791ee7dd0eef.svg';
 
 export const HeroSection = () => {
