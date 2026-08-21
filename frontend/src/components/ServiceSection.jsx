@@ -5,13 +5,15 @@ import imgServiceBg from '../assets/service-bg.png';
 import imgServiceStar1 from '../assets/service-star-1.png';
 import imgServiceStar2 from '../assets/service-star-2.png';
 import imgServiceStar3 from '../assets/service-star-3.png';
-import imgServiceUiUx from '../assets/service-uiux.png';
-import imgServiceWeb from '../assets/service-web.png';
-import imgServiceMask from '../assets/service-mask.svg';
+import imgServiceUiUx from '../assets/uiux.jpeg';
+import imgServiceWeb from '../assets/web-development.jpeg';
+import imgLandingPage from '../assets/landing-page.jpeg';
 import imgServiceBorder from '../assets/service-border.svg';
-import imgServiceLine from '../assets/service-line.svg';
 import imgServiceArrow1 from '../assets/service-arrow1.svg';
 import imgServiceArrow2 from '../assets/service-arrow2.svg';
+import mobileApp from '../assets/mobile-app.jpeg';
+import productStategy from '../assets/product-strategy.jpeg';
+
 
 export const ServiceSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -19,10 +21,9 @@ export const ServiceSection = () => {
   const services = [
     { title: "UI/ UX Design", image: imgServiceUiUx },
     { title: "Web Design", image: imgServiceWeb },
-    { title: "Landing Page", image: imgServiceUiUx },
-    { title: "Mobile App", image: imgServiceWeb },
-    { title: "Product Strategy", image: imgServiceUiUx },
-    { title: "Illustration", image: imgServiceWeb }
+    { title: "Landing Page", image: imgLandingPage },
+    { title: "Mobile App", image: mobileApp },
+    { title: "Product Strategy", image: productStategy },
   ];
 
   // For a 3-item layout, we can slide up to (total - 3) times.
