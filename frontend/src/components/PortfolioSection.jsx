@@ -7,12 +7,18 @@ import imgVector from '../assets/81bdce8e525ef4788fce47b9d51ca1c4127e86c6.svg';
 import imgVector1 from '../assets/3b88acfc6a5ec5ad32cd308a92fa59b742d56c2b.svg';
 
 
+import imgSocialApp from '../assets/social-mobile-app.jpg';
+import imgExpenseTracker from '../assets/expense-tracker.jpg';
+import moodTracker from '../assets/mood-tracker.jpg';
+import taskManager from '../assets/task-manager.jpg';
+
+
 // list of items with iamge path, name
 const portfolioList = [
-  { id: 1, name: 'Investors Group LLC', image: imgFrame26 },
-  { id: 1, name: 'Lirante', image: imgFrame26 },
-  { id: 1, name: 'Lirante', image: imgFrame26 },
-  { id: 1, name: 'Lirante', image: imgFrame26 },
+  { id: 1, name: 'Social Mobile App', image: imgSocialApp },
+  { id: 1, name: 'Expense Tracker', image: imgExpenseTracker },
+  { id: 1, name: 'Mood Tracker', image: moodTracker },
+  { id: 1, name: 'Task Manager', image: taskManager },
 ];
 
 
