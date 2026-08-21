@@ -17,6 +17,7 @@ import productStategy from '../assets/product-strategy.jpeg';
 
 export const ServiceSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [transitionEnabled, setTransitionEnabled] = useState(true);
 
   const services = [
     { title: "UI/ UX Design", image: imgServiceUiUx },
@@ -26,17 +27,37 @@ export const ServiceSection = () => {
     { title: "Product Strategy", image: productStategy },
   ];
 
-  // For a 3-item layout, we can slide up to (total - 3) times.
-  // With 6 items, that gives us exactly 4 distinct pages/dots (0, 1, 2, 3)
-  const maxIndex = services.length - 3;
+  // Clone the first 3 items at the end to make infinite scroll seamless
+  const extendedServices = [
+    ...services,
+    ...services.slice(0, 3)
+  ];
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex >= maxIndex ? 0 : prevIndex + 1));
+      setTransitionEnabled(true);
+      setCurrentIndex((prevIndex) => prevIndex + 1);
     }, 3000);
 
     return () => clearInterval(timer);
-  }, [maxIndex]);
+  }, []);
+
+  // Reset index to 0 without transition when reaching the first clone page
+  useEffect(() => {
+    if (currentIndex === services.length) {
+      const timeout = setTimeout(() => {
+        setTransitionEnabled(false);
+        setCurrentIndex(0);
+        
+        // Re-enable transition in the next tick
+        setTimeout(() => {
+          setTransitionEnabled(true);
+        }, 50);
+      }, 500); // 500ms matches transition duration
+
+      return () => clearTimeout(timeout);
+    }
+  }, [currentIndex, services.length]);
 
   return (
     <section className="service-container" id="service">
@@ -63,9 +84,6 @@ export const ServiceSection = () => {
           <h2 className="service-title">
             My <span className="highlight">Services</span>
           </h2>
-          {/* <p className="service-subtitle">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lacus nunc, posuere in justo vulputate, bibendum sodales
-          </p> */}
         </div>
 
         {/* Service Cards */}
@@ -73,9 +91,12 @@ export const ServiceSection = () => {
           <div className="service-cards-viewport">
             <div
               className="service-cards-track"
-              style={{ transform: `translateX(-${currentIndex * (416 + 20)}px)` }}
+              style={{ 
+                transform: `translateX(-${currentIndex * (416 + 20)}px)`,
+                transition: transitionEnabled ? 'transform 0.5s ease-in-out' : 'none'
+              }}
             >
-              {services.map((service, index) => (
+              {extendedServices.map((service, index) => (
                 <div key={index} className="service-card">
                   {/* The mask applies the cut-out corner shape */}
                   <div className="service-card-mask">
@@ -112,11 +133,14 @@ export const ServiceSection = () => {
 
           {/* Pagination Dots */}
           <div className="service-pagination">
-            {Array.from({ length: maxIndex + 1 }).map((_, idx) => (
+            {services.map((_, idx) => (
               <div
                 key={idx}
-                className={`dot ${currentIndex === idx ? 'active' : ''}`}
-                onClick={() => setCurrentIndex(idx)}
+                className={`dot ${currentIndex % services.length === idx ? 'active' : ''}`}
+                onClick={() => {
+                  setTransitionEnabled(true);
+                  setCurrentIndex(idx);
+                }}
                 style={{ cursor: 'pointer' }}
               ></div>
             ))}
