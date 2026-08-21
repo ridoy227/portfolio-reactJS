@@ -15,15 +15,48 @@ import taskManager from '../assets/task-manager.jpg';
 
 // list of items with iamge path, name
 const portfolioList = [
-  { id: 1, name: 'Social Mobile App', image: imgSocialApp },
-  { id: 1, name: 'Expense Tracker', image: imgExpenseTracker },
-  { id: 1, name: 'Mood Tracker', image: moodTracker },
-  { id: 1, name: 'Task Manager', image: taskManager },
+  {
+    id: 1,
+    name: 'Social Mobile App',
+    image: imgSocialApp,
+    description: 'Social Mobile App is a next-generation platform designed to bring people closer. It features real-time instant messaging, end-to-end encryption, interactive feeds, custom profile designs, and advanced privacy settings to ensure user safety while sharing posts, images, and videos with friends and followers.',
+    priceRange: '$8,000 - $12,000',
+    duration: '2-3 months',
+    industries: 'Social Media, Communication'
+  },
+  {
+    id: 2,
+    name: 'Expense Tracker',
+    image: imgExpenseTracker,
+    description: 'Expense Tracker is a robust financial utility created to simplify budgeting and cost tracking. Users can seamlessly connect accounts, log expenses, scan receipts using optical character recognition, track monthly budget targets, and view clean visual charts summarizing their spending behavior.',
+    priceRange: '$4,000 - $6,000',
+    duration: '1-2 months',
+    industries: 'Finance, Utilities'
+  },
+  {
+    id: 3,
+    name: 'Mood Tracker',
+    image: moodTracker,
+    description: 'Mood Tracker is a wellness application that helps users monitor and analyze their mental well-being over time. Through a series of quick check-ins, journal entries, and customizable emotion tags, the app provides insights, mood trends, and personalized mindfulness exercises to help foster mental balance.',
+    priceRange: '$5,000 - $7,500',
+    duration: '1-2 months',
+    industries: 'Health & Wellness, Lifestyle'
+  },
+  {
+    id: 4,
+    name: 'Task Manager',
+    image: taskManager,
+    description: 'Task Manager is a collaborative workflow tool built for teams and individuals. It provides a visual Kanban board, progress timelines, check-lists, files attachments, deadline alerts, and automatic notifications, enabling teams to complete tasks on time with maximum productivity.',
+    priceRange: '$6,000 - $9,000',
+    duration: '2 months',
+    industries: 'Productivity, Enterprise'
+  },
 ];
 
 
 export const PortfolioSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [selectedProject, setSelectedProject] = useState(null);
   const carouselRef = useRef(null);
 
   useEffect(() => {
@@ -85,7 +118,12 @@ export const PortfolioSection = () => {
           onScroll={handleScroll}
         >
           {portfolioList.map((item, index) => (
-            <div key={index} className="portfolio-card">
+            <div
+              key={index}
+              className="portfolio-card"
+              onClick={() => setSelectedProject(item)}
+              style={{ cursor: 'pointer' }}
+            >
               <img className="portfolio-card-bg" src={item.image} alt="Project" />
               <div className="portfolio-card-gradient"></div>
               <div className="portfolio-card-content">
@@ -108,8 +146,45 @@ export const PortfolioSection = () => {
             ></div>
           ))}
         </div>
-
       </div>
+
+      {/* Project Details Modal */}
+      {selectedProject && (
+        <div className="portfolio-modal-overlay" onClick={() => setSelectedProject(null)}>
+          <div className="portfolio-modal-card" onClick={(e) => e.stopPropagation()}>
+            <button className="portfolio-modal-close" onClick={() => setSelectedProject(null)}>
+              ✕
+            </button>
+
+            <div className="portfolio-modal-image-wrapper">
+              <img src={selectedProject.image} alt={selectedProject.name} className="portfolio-modal-img" />
+            </div>
+
+            <div className="portfolio-modal-info">
+              <h2 className="portfolio-modal-title">{selectedProject.name}</h2>
+
+              <div className="portfolio-modal-specs">
+                <div className="spec-item">
+                  <span className="spec-label">Price range</span>
+                  <span className="spec-value">{selectedProject.priceRange}</span>
+                </div>
+                <div className="spec-item">
+                  <span className="spec-label">Project duration</span>
+                  <span className="spec-value">{selectedProject.duration}</span>
+                </div>
+                <div className="spec-item">
+                  <span className="spec-label">Industries</span>
+                  <span className="spec-value">{selectedProject.industries}</span>
+                </div>
+              </div>
+
+              <div className="portfolio-modal-divider"></div>
+
+              <p className="portfolio-modal-desc">{selectedProject.description}</p>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 };
